@@ -16,7 +16,7 @@ userInfo = {
 	-- CPU load level, It is recommended to enter a number between 1 and 30, cannot be less than 1.
 	-- The lower the value is, the better the effect is, the higher the value, the higher the number of frames.
 	-- (excessive frame dropping will directly affect the gun pressing effect, please reduce the value while ensuring the frame number)
-	cpuLoad = 2,
+	cpuLoad = 8,
 
 	-- 灵敏度调整 | Sensitivity adjustment
 	commonSensitivity = {
@@ -25,13 +25,13 @@ userInfo = {
 		-- 腰射 | take aim
 		Aim = 0.55,
 		-- 二倍 | twice scope
-		scopeX2 = 1.3,
+		scopeX2 = 0.8,
 		-- 三倍 | trebling scope
-		scopeX3 = 1.3,
+		scopeX3 = 1.11,
 		-- 四倍 | quadruple scope
 		scopeX4 = 3.9,
 		-- 六倍 | sixfold scope
-		scopeX6 = 2.3,
+		scopeX6 = 2.15,
 	},
 
 	-- 自动腰射，不使用自动腰射留空，使用则设置为键盘上按键
@@ -61,29 +61,45 @@ userInfo = {
 	-- 系数：枪械自身系数，基于 ADS 进行调整 (ADS为全局系数，此处为自身系数)
 	-- 下蹲系数：下蹲时的系数，基于 ADS 和 自身系数
 	canUse = {
-		[".45"] = {
-			-- 枪械				模式        下蹲系数	 灵敏度系数
-			{ "UMP45",          1,          0.8 ,		 { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4.5, scopeX6 = 6} }, -- 基础镜 + 扩容，Bizon (基础镜即可)，Vector (补偿 + 基础镜 + 扩容) | Reddot + Mag，Bizon (Reddot)，Vector (Komp + Reddot + Mag)
-			{ "Tommy Gun",      1,          0.8 ,		 { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 扩容 | Mag
-		},
-			-- 枪械             模式        下蹲系数	 灵敏度系数
-		["9mm"] = {
-			{ "Vector",         1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 基础镜 + 扩容 | Reddot + Mag
-			{ "Micro UZI",      1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 扩容 | Mag
-		},
 		["5.56"] = {
-			-- 枪械             模式        下蹲系数	 灵敏度系数
-			{ "M416",           1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
-			{ "SCAR-L",         1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "QBZ",            1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "G36C",           1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "M16A4",          2,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
+			-- 枪械				模式		下蹲系数		灵敏度系数
+			{ "M416",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
+			{ "SCAR-L",			0,			0.8, 			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "QBZ",			0,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "G36C",			0,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "M16A4",			2,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
 		},
 		["7.62"] = {
-			-- 枪械             模式        下蹲系数	 灵敏度系数
-			{ "AKM",            1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
-			{ "Beryl M762",     1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "DP-28",          0,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 基础镜 | Reddot
+			-- 枪械				模式		下蹲系数		灵敏度系数	
+			{ "Beryl M762",		1,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "AKM",			1,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
+			{ "DP-28",			0,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 | Reddot
+		},
+		[".45"] = {
+			-- 枪械				模式		下蹲系数		灵敏度系数	
+			{ "UMP45",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 + 扩容，Bizon (基础镜即可)，Vector (补偿 + 基础镜 + 扩容) | Reddot + Mag，Bizon (Reddot)，Vector (Komp + Reddot + Mag)
+			{ "Tommy Gun",		1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 扩容 | Mag
+		},
+		["9mm"] = {
+			-- 枪械				模式		下蹲系数		灵敏度系数			
+			{ "Vector",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 + 扩容 | Reddot + Mag
+			{ "Micro UZI",		1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 扩容 | Mag
+		},
+
+		["DMR 7.62"] = {
+			-- 枪械				模式		下蹲系数		灵敏度系数	
+			{ "SKS",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
+			{ "SLR",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
+			--{ "MK47",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
+		},
+		["DMR 5.56"] = {
+			-- 枪械				模式		下蹲系数		灵敏度系数		
+			{ "Mini14",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
+			{ "QBU",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
+		},
+		["AR"] = {
+			-- 枪械				模式		下蹲系数		灵敏度系数	
+			{ "SingleShot",		1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} },
 		},
 	},
 
@@ -92,22 +108,22 @@ userInfo = {
 	-- 指令绑定演示参考: https://github.com/kiccer/Soldier76#g_bind-%E6%8C%87%E4%BB%A4%E7%BB%91%E5%AE%9A%E6%BC%94%E7%A4%BA
 	G_bind = {
 		-- G
-		["G3"] = "",
-		["G4"] = "",
-		["G5"] = "",
-		["G6"] = "5.56",
-		["G7"] = "9mm",
-		["G8"] = "7.62",
-		["G9"] = ".45",
+		["G3"] = "SLR|scopeX6",
+		["G4"] = "Beryl M762|scopeX1",
+		["G5"] = "AKM|scopeX1",
+		["G6"] = "5.56|scopeX1",
+		["G7"] = "M16A4|scopeX3",
+		["G8"] = ".45|scopeX1",
+		["G9"] = "9mm|scopeX1",
 		["G10"] = "last",
 		["G11"] = "next",
 		-- lalt + G
-		["lalt + G3"] = "",
-		["lalt + G4"] = "",
-		["lalt + G5"] = "",
-		["lalt + G6"] = "",
-		["lalt + G7"] = "",
-		["lalt + G8"] = "",
+		["lalt + G3"] = "Mini14|scopeX6",
+		["lalt + G4"] = "scopeX1",
+		["lalt + G5"] = "scopeX2",
+		["lalt + G6"] = "scopeX6",
+		["lalt + G7"] = "scopeX3",
+		["lalt + G8"] = "scopeX4",
 		["lalt + G9"] = "",
 		["lalt + G10"] = "",
 		["lalt + G11"] = "",
@@ -180,8 +196,8 @@ userInfo = {
 
 
 
-
-
+-- 全局枪械口径列表
+local forList = { ".45", "9mm", "5.56", "7.62", "DMR 7.62", "DMR 5.56", "AR" }
 
 
 
@@ -207,16 +223,22 @@ userInfo = {
 -- internal configuration
 pubg = {
 	gun = {
-		[".45"] = {},
-		["9mm"] = {},
 		["5.56"] = {},
 		["7.62"] = {},
+		[".45"] = {},
+		["9mm"] = {},
+		["DMR 7.62"] = {},
+		["DMR 5.56"] = {},
+		["AR"] = {},
 	}, -- 枪械库
 	gunOptions = {
-		[".45"] = {},
-		["9mm"] = {},
 		["5.56"] = {},
 		["7.62"] = {},
+		[".45"] = {},
+		["9mm"] = {},
+		["DMR 7.62"] = {},
+		["DMR 5.56"] = {},
+		["AR"] = {},
 	}, -- 配置库
 	allCanUse = {}, -- 所有可用枪械
 	allCanUse_index = 1, -- 所有可用枪械列表索引
@@ -226,7 +248,7 @@ pubg = {
 	counter = 0, -- 计数器
 	xCounter = 0, -- x计数器
 	sleep = userInfo.cpuLoad, -- 频率设置 (这里不能设置成0，调试会出BUG)
-	sleepRandom = { userInfo.cpuLoad, userInfo.cpuLoad + 5 }, -- 防检测随机延迟
+	sleepRandom = { userInfo.cpuLoad, userInfo.cpuLoad + 1 }, -- 防检测随机延迟
 	startTime = 0, -- 鼠标按下时记录脚本运行时间戳
 	prevTime = 0, -- 记录上一轮脚本运行时间戳
 	scopeX1 = 1, -- 基瞄压枪倍率 (裸镜、红点、全息、侧瞄)
@@ -242,7 +264,7 @@ pubg = {
 	bulletIndex = 0, -- 第几颗子弹
 }
 
-pubg.xLengthForDebug = pubg.generalSensitivityRatio * 30 -- 调试模式下的水平移动单元长度
+pubg.xLengthForDebug = pubg.generalSensitivityRatio * 40 -- 调试模式下的水平移动单元长度
 -- 渲染节点
 pubg.renderDom = {
 	switchTable = "",
@@ -291,14 +313,25 @@ function pubg.isAimingState (mode)
 	return switch[mode]()
 end
 
-pubg["M16A4"] = function (gunName)
+----------------------------- [枪械弹道] -----------------------------
+
+
+--------------------------------- 5.56--------------------------------
+pubg["M416"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 108,
+		interval = 85,
 		ballistic = {
 			{1, 0},
-			{5, 20},
-			{40, 24},
+			{2, 131},
+			{3, 61},
+			{5, 68},
+			{8, 89},
+			{15, 105},
+			{20, 106},
+			{25, 110},
+			{30, 119},
+			{40, 123},
 		}
 	})
 
@@ -310,46 +343,31 @@ pubg["SCAR-L"] = function (gunName)
 		interval = 96,
 		ballistic = {
 			{1, 0},
-			{2, 30},
-			{5, 20},
-			{10, 24},
-			{15, 28},
-			{40, 32},
+			{2, 140},
+			{3, 40},
+			{4, 60},
+			{5, 80},
+			{10, 94},
+			{15, 102},
+			{40, 122},
 		}
 	})
 
 end
 
-pubg["Beryl M762"] = function (gunName)
+pubg["QBZ"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 86,
+		interval = 87,
 		ballistic = {
 			{1, 0},
-			{2, 44},
-			{3, 24},
-			{5, 28},
-			{10, 33},
-			{15, 45},
-			{30, 47},
-			{40, 51},
-		}
-	})
-
-end
-
-pubg["Tommy Gun"] = function (gunName)
-
-	return pubg.execOptions(gunName, {
-		interval = 84,
-		ballistic = {
-			{1, 0},
-			{3, 20},
-			{6, 21},
-			{8, 24},
-			{10, 30},
-			{15, 40},
-			{50, 45},
+			{2, 125},
+			{5, 53},
+			{15, 97},
+			{25, 117},
+			{30, 116},
+			{35, 115},
+			{40, 126},
 		}
 	})
 
@@ -358,61 +376,72 @@ end
 pubg["G36C"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
+		interval = 80,
+		ballistic = {
+			{1, 0},
+			{2, 135},
+			{5, 62},
+			{10, 80},
+			{20, 101},
+			{25, 108},
+			{40, 109},
+		}
+	})
+
+end
+
+--pubg["M16A4"] = function (gunName)
+--	return pubg.execOptions(gunName, {
+--		interval = 108,
+--		ballistic = {
+--			{1, 0},
+--			{2, 140},
+--			{3, 47},
+--			{4, 68},
+--			{5, 87},
+--			{10, 102},
+--			{20, 119},
+--			{35, 121},
+--			{40, 127},
+--		}
+--	})
+--end
+
+pubg["M16A4"] = function (gunName)
+	return pubg.execOptions(gunName, {
+		interval = 108,
+		ballistic = {
+			{1, 0},
+			{2, 110},
+			{3, 116},
+		}
+	})
+end
+
+--------------------------------- 7.62--------------------------------
+
+pubg["Beryl M762"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
 		interval = 86,
 		ballistic = {
 			{1, 0},
-			{2, 40},
-			{5, 16},
-			{10, 26},
-			{15, 30},
-			{20, 34},
-			{40, 36},
-		}
-	})
-
-end
-
-pubg["Vector"] = function (gunName)
-
-	return pubg.execOptions(gunName, {
-		interval = 55,
-		ballistic = {
-			{1, 0},
-			{6, 16},
-			{10, 20},
-			{13, 24},
-			{15, 28},
-			{20, 32},
-			{33, 34},
-		}
-	})
-
-end
-
-pubg["Micro UZI"] = function (gunName)
-
-	return pubg.execOptions(gunName, {
-		interval = 46,
-		ballistic = {
-			{1, 0},
-			{2, 13},
-			{10, 12},
-			{15, 20},
-			{35, 30},
-		}
-	})
-
-end
-
-pubg["UMP45"] = function (gunName)
-
-	return pubg.execOptions(gunName, {
-		interval = 94,
-		ballistic = {
-			{1, 0},
-			{5, 18},
-			{15, 30},
-			{35, 32},
+			{2, 150},
+			{3, 100},
+			{4, 85},
+			{6, 115},
+			{7, 125},
+			{10, 136},
+			{11, 146},
+			{12, 140},
+			{14, 155},
+			{15, 157},
+			{18, 162},
+			{20, 175},
+			{25, 185},
+			{30, 178},
+			{35, 177},
+			{40, 177},
 		}
 	})
 
@@ -424,48 +453,18 @@ pubg["AKM"] = function (gunName)
 		interval = 99,
 		ballistic = {
 			{1, 0},
-			{2, 42},
-			{5, 25},
-			{10, 32},
-			{40, 40},
+			{2, 149},
+			{5, 93},
+			{10, 104},
+			{15, 140},
+			{25, 145},
+			{35, 146},
+			{40, 147},
 		}
 	})
 
 end
 
-pubg["M416"] = function (gunName)
-
-	return pubg.execOptions(gunName, {
-		interval = 85,
-		ballistic = {
-			{1, 0},
-			{2, 35},
-			{4, 18},
-			{10, 24},
-			{15, 32},
-			{30, 30},
-			{40, 37},
-		}
-	})
-
-end
-
-pubg["QBZ"] = function (gunName)
-
-	return pubg.execOptions(gunName, {
-		interval = 92,
-		ballistic = {
-			{1, 0},
-			{2, 34},
-			{5, 18},
-			{10, 22},
-			{15, 32},
-			{20, 34},
-			{40, 36},
-		}
-	})
-
-end
 
 pubg["DP-28"] = function (gunName)
 
@@ -473,18 +472,193 @@ pubg["DP-28"] = function (gunName)
 		interval = 100,
 		ballistic = {
 			{1, 0},
-			{2, 30},
-			{5, 20},
-			{47, 30},
+			{7, 106},
+			{10, 166},
+			{20, 196},
+			{40, 191},
+			{47, 206},
 		}
 	})
 
 end
 
+
+--------------------------------- .45--------------------------------
+
+pubg["UMP45"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 94,
+		ballistic = {
+			{1, 0},
+			{5, 70},
+			{10, 97},
+			{15, 111},
+			{30, 123},
+			{35, 126},
+		}
+	})
+
+end
+
+pubg["Tommy Gun"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 84,
+		ballistic = {
+			{1, 0},
+			{5, 72},
+			{10, 90},
+			{15, 150},
+			{20, 160},
+			{30, 165},
+			{40, 155},
+			{50, 155},
+		}
+	})
+
+end
+
+--------------------------------- 9mm --------------------------------
+
+pubg["Vector"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 55,
+		ballistic = {
+			{1, 0},
+			{2, 60},
+			{3, 50},
+			{5, 51},
+			{6, 80},
+			{7, 80},
+			{10, 80},
+			{12, 85},
+			{15, 99},
+			{20, 128},
+			{25, 128},
+			{28, 127},
+			{33, 128},
+		}
+	})
+
+end
+
+pubg["Micro UZI"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 46,
+		ballistic = {
+			{1, 0},
+			{2, 80},
+			{5, 29},
+			{10, 47},
+			{13, 70},
+			{20, 99},
+			{35, 109},
+		}
+	})
+
+end
+
+
+-------------------------------- [狙击步枪] -------------------------------
+
+--------------- 7.62 ---------------
+
+pubg["SKS"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		--interval = 107,
+		interval = 40,
+		ballistic = {
+			{1, 0},
+			{2, 65}
+		}
+	})
+
+end
+
+pubg["SLR"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 10,
+		ballistic = {
+			{1, 20},
+			{2, 70}
+		}
+	})
+
+end
+
+pubg["MK47"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 20,
+		ballistic = {
+			{1, 0},
+			{2, 50},
+			--{3, 20},
+			--{4, 95}
+		}
+	})
+
+
+end
+
+--------------- 5.56 ---------------
+
+pubg["Mini14"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 30,
+		ballistic = {
+			{1, 0},
+			{2, 90},
+		}
+	})
+
+end
+
+pubg["QBU"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 30,
+		ballistic = {
+			{1, 0},
+			{2, 80},
+		}
+	})
+
+end
+
+----------------------------- [狙击步枪 End] -------------------------------
+
+
+
+------------------------------ [单发狙 End] --------------------------------
+
+pubg["SingleShot"] = function (gunName)
+
+	return pubg.execOptions(gunName, {
+		interval = 10,
+		ballistic = {
+			{1, 0},
+			{2, 40}
+		}
+	})
+
+end
+
+------------------------------ [单发狙 End] --------------------------------
+
+
+
+----------------------------- [枪械弹道 End] -----------------------------
+
+
 -- [[通过枪械名查找在 canuse 中的项]]
 function pubg.canUseFindByGunName (gunName)
-	local forList = { ".45", "9mm", "5.56", "7.62" }
-
 	for i = 1, #forList do
 		local bulletType = forList[i]
 		for j = 1, #userInfo.canUse[bulletType] do
@@ -519,7 +693,7 @@ function pubg.execOptions (gunName, options)
 	]]
 
 	local gunInfo = pubg.canUseFindByGunName(gunName)
-
+	
 	local sensitivity = gunInfo[4];
 	if sensitivity == nil then
 		sensitivity = {
@@ -531,7 +705,6 @@ function pubg.execOptions (gunName, options)
 			scopeX6 = pubg.scopeX6
 		}
 	end
-	
 
 	-- Temporary container
 	local ballisticConfig1 = {}
@@ -565,8 +738,6 @@ function pubg.execOptions (gunName, options)
 	-- 	ballisticConfig2[i] = math.ceil(ballisticConfig2[i])
 	-- end
 
-
-
 	return {
 		duration = options.interval * #ballisticConfig2, -- Time of duration
 		amount = #ballisticConfig2, -- Number of bullets
@@ -582,7 +753,6 @@ end
 function pubg.init ()
 
 	-- Clean up the firearms Depot
-	local forList = { ".45", "9mm", "5.56", "7.62" }
 
 	for i = 1, #forList do
 
@@ -619,6 +789,7 @@ function pubg.init ()
 	pubg.SetRandomseed()
 	pubg.outputLogRender()
 	-- console.log(pubg)
+
 end
 
 -- SetRandomseed
@@ -630,12 +801,12 @@ end
 function pubg.auto (options)
 
 	-- Accurate aiming press gun
-	pubg.currentTime = 200
+	pubg.currentTime = GetRunningTime()
 	pubg.bulletIndex = math.ceil(((pubg.currentTime - pubg.startTime == 0 and {1} or {pubg.currentTime - pubg.startTime})[1]) / options.interval) + 1
 
 	if pubg.bulletIndex > options.amount then return false end
 	-- Developer Debugging Mode
-	local d = ({ (pubg.bulletIndex - 1) * pubg.xLengthForDebug } or { 0 })[1]
+	local d = (IsKeyLockOn("scrolllock") and { (pubg.bulletIndex - 1) * pubg.xLengthForDebug } or { 0 })[1]
 	local x = math.ceil((pubg.currentTime - pubg.startTime) / (options.interval * (pubg.bulletIndex - 1)) * d) - pubg.xCounter
 	local y = math.ceil((pubg.currentTime - pubg.startTime) / (options.interval * (pubg.bulletIndex - 1)) * options.ballistic[pubg.bulletIndex]) - pubg.counter
 	-- 4-fold pressure gun mode
@@ -676,12 +847,12 @@ function pubg.getRealY (options, y)
 
 	local cuurentSensitivity = options.sensitivity[pubg.scope_current]
 
-	local aa = pubg[pubg.scope_current]
-
 	if pubg.isAimingState("ADS") then
-		realY = y * pubg[pubg.scope_current]
+		-- realY = y * pubg[pubg.scope_current] -- 全局配置
+		realY = y * cuurentSensitivity
 	elseif pubg.isAimingState("Aim") then
-		realY = y * userInfo.commonSensitivity.Aim * pubg.generalSensitivityRatio
+		-- realY = y * userInfo.sensitivity.Aim * pubg.generalSensitivityRatio -- 全局配置
+		realY = y * options.sensitivity.Aim * pubg.generalSensitivityRatio
 	end
 
 	if userInfo.aimingSettings == "ctrlmode" and IsModifierPressed("lctrl") then
@@ -709,8 +880,6 @@ function pubg.setBulletType (bulletType)
 	pubg.gunIndex = 1
 	pubg.allCanUse_index = 0
 
-	local forList = { ".45", "9mm", "5.56", "7.62" }
-
 	for i = 1, #forList do
 		local type = forList[i]
 		if type ==  bulletType then
@@ -732,7 +901,6 @@ end
 --[[ set current gun ]]
 function pubg.setGun (gunName)
 
-	local forList = { ".45", "9mm", "5.56", "7.62" }
 	local allCanUse_index = 0
 
 	for i = 1, #forList do
@@ -949,27 +1117,48 @@ function pubg.runCmd (cmd)
 	if cmd == "" then cmd = "none" end
 	local switch = {
 		["none"] = function () end,
-		[".45"] = pubg.setBulletType,
-		["9mm"] = pubg.setBulletType,
-		["5.56"] = pubg.setBulletType,
-		["7.62"] = pubg.setBulletType,
+
 		["scopeX1"] = pubg.setScope,
 		["scopeX2"] = pubg.setScope,
 		["scopeX3"] = pubg.setScope,
 		["scopeX4"] = pubg.setScope,
 		["scopeX6"] = pubg.setScope,
-		["UMP45"] = pubg.setGun,
-		["Tommy Gun"] = pubg.setGun,
-		["Vector"] = pubg.setGun,
-		["Micro UZI"] = pubg.setGun,
+
+		[".45"] = pubg.setBulletType,
+		["9mm"] = pubg.setBulletType,
+		["5.56"] = pubg.setBulletType,
+		["7.62"] = pubg.setBulletType,
+		["DMR 7.62"] = pubg.setBulletType,
+		["DMR 5.56"] = pubg.setBulletType,
+		["AR"] = pubg.setBulletType,
+		
 		["M416"] = pubg.setGun,
 		["SCAR-L"] = pubg.setGun,
 		["QBZ"] = pubg.setGun,
 		["G36C"] = pubg.setGun,
 		["M16A4"] = pubg.setGun,
-		["AKM"] = pubg.setGun,
+		
+		
 		["Beryl M762"] = pubg.setGun,
+		["AKM"] = pubg.setGun,
+		["Mk47"] = pubg.setGun,
 		["DP-28"] = pubg.setGun,
+		
+		["UMP45"] = pubg.setGun,
+		["Tommy Gun"] = pubg.setGun,
+		
+		["Vector"] = pubg.setGun,
+		["Micro UZI"] = pubg.setGun,
+
+		["SKS"] = pubg.setGun,
+		["SLR"] = pubg.setGun,
+		["MK47"] = pubg.setGun,
+
+		["Mini14"] = pubg.setGun,
+		["QBU"] = pubg.setGun,
+
+		["SingleShot"] = pubg.setGun,
+
 		["first"] = pubg.findInSeries,
 		["next"] = pubg.findInSeries,
 		["last"] = pubg.findInSeries,
@@ -1010,13 +1199,12 @@ function pubg.outputLogRender ()
 		pubg.renderDom.autoLog,
 		pubg.renderDom.separator,
 	})
-	-- ClearLog()
-	print(resStr)
+	ClearLog()
+	OutputLogMessage(resStr)
 end
 
 --[[ Output switching table ]]
 function pubg.outputLogGunSwitchTable ()
-	local forList = { ".45", "9mm", "5.56", "7.62" }
 	local allCount = 0
 	local resStr = "      canUse_i\t      series_i\t      Series\t      ratio\t      ctrl ratio\t      Gun Name\n\n"
 
@@ -1316,16 +1504,12 @@ end
 -- console
 console = {}
 function console.log (str)
-	print(table.print(str) .. "\n")
+	OutputLogMessage(table.print(str) .. "\n")
 end
 
 --[[ Other ]]
--- EnablePrimaryMouseButtonEvents(true) -- Enable left mouse button event reporting
+EnablePrimaryMouseButtonEvents(true) -- Enable left mouse button event reporting
 pubg.GD = GetDate -- Setting aliases
 pubg.init() -- Script initialization
-
-pubg.runCmd("scopeX4")
-
-pubg.auto(pubg.gunOptions[pubg.bulletType][pubg.gunIndex])
 
 --[[ Script End ]]
