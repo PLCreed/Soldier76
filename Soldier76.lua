@@ -19,7 +19,7 @@ userInfo = {
 	cpuLoad = 2,
 
 	-- 灵敏度调整 | Sensitivity adjustment
-	sensitivity = {
+	commonSensitivity = {
 		-- 开镜 | sighting mirror
 		ADS = 100,
 		-- 腰射 | take aim
@@ -62,28 +62,28 @@ userInfo = {
 	-- 下蹲系数：下蹲时的系数，基于 ADS 和 自身系数
 	canUse = {
 		[".45"] = {
-			-- 枪械             模式         系数        下蹲系数
-			{ "UMP45",          1,          1,          0.8 }, -- 基础镜 + 扩容，Bizon (基础镜即可)，Vector (补偿 + 基础镜 + 扩容) | Reddot + Mag，Bizon (Reddot)，Vector (Komp + Reddot + Mag)
-			{ "Tommy Gun",      1,          1,          0.8 }, -- 扩容 | Mag
+			-- 枪械				模式        下蹲系数	 灵敏度系数
+			{ "UMP45",          1,          0.8 ,		 { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4.5, scopeX6 = 6} }, -- 基础镜 + 扩容，Bizon (基础镜即可)，Vector (补偿 + 基础镜 + 扩容) | Reddot + Mag，Bizon (Reddot)，Vector (Komp + Reddot + Mag)
+			{ "Tommy Gun",      1,          0.8 ,		 { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 扩容 | Mag
 		},
-			-- 枪械             模式         系数        下蹲系数
+			-- 枪械             模式        下蹲系数	 灵敏度系数
 		["9mm"] = {
-			{ "Vector",         1,          1,          0.8 }, -- 基础镜 + 扩容 | Reddot + Mag
-			{ "Micro UZI",      1,          1,          0.8 }, -- 扩容 | Mag
+			{ "Vector",         1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 基础镜 + 扩容 | Reddot + Mag
+			{ "Micro UZI",      1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 扩容 | Mag
 		},
 		["5.56"] = {
-			-- 枪械             模式         系数        下蹲系数
-			{ "M416",           1,          1,          0.8 }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
-			{ "SCAR-L",         1,          1,          0.8 }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "QBZ",            1,          1,          0.8 }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "G36C",           1,          1,          0.8 }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "M16A4",          2,          1,          0.8 }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
+			-- 枪械             模式        下蹲系数	 灵敏度系数
+			{ "M416",           1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
+			{ "SCAR-L",         1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "QBZ",            1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "G36C",           1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "M16A4",          2,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
 		},
 		["7.62"] = {
-			-- 枪械             模式         系数        下蹲系数
-			{ "AKM",            1,          1,          0.8 }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
-			{ "Beryl M762",     1,          1,          0.8 }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "DP-28",          0,          1,          0.8 }, -- 基础镜 | Reddot
+			-- 枪械             模式        下蹲系数	 灵敏度系数
+			{ "AKM",            1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
+			{ "Beryl M762",     1,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "DP-28",          0,          0.8,         { Aim = 0.55, scopeX1 = 1, scopeX2 = 2, scopeX3 = 3, scopeX4 = 4, scopeX6 = 6} }, -- 基础镜 | Reddot
 		},
 	},
 
@@ -230,12 +230,12 @@ pubg = {
 	startTime = 0, -- 鼠标按下时记录脚本运行时间戳
 	prevTime = 0, -- 记录上一轮脚本运行时间戳
 	scopeX1 = 1, -- 基瞄压枪倍率 (裸镜、红点、全息、侧瞄)
-	scopeX2 = userInfo.sensitivity.scopeX2, -- 二倍压枪倍率
-	scopeX3 = userInfo.sensitivity.scopeX3, -- 三倍压枪倍率
-	scopeX4 = userInfo.sensitivity.scopeX4, -- 四倍压枪倍率
-	scopeX6 = userInfo.sensitivity.scopeX6, -- 六倍压枪倍率
+	scopeX2 = userInfo.commonSensitivity.scopeX2, -- 二倍压枪倍率
+	scopeX3 = userInfo.commonSensitivity.scopeX3, -- 三倍压枪倍率
+	scopeX4 = userInfo.commonSensitivity.scopeX4, -- 四倍压枪倍率
+	scopeX6 = userInfo.commonSensitivity.scopeX6, -- 六倍压枪倍率
 	scope_current = "scopeX1", -- 当前使用倍镜
-	generalSensitivityRatio = userInfo.sensitivity.ADS / 100, -- 按比例调整灵敏度
+	generalSensitivityRatio = userInfo.commonSensitivity.ADS / 100, -- 按比例调整灵敏度
 	isStart = false, -- 是否是启动状态
 	G1 = false, -- G1键状态
 	currentTime = 0, -- 此刻
@@ -520,6 +520,19 @@ function pubg.execOptions (gunName, options)
 
 	local gunInfo = pubg.canUseFindByGunName(gunName)
 
+	local sensitivity = gunInfo[4];
+	if sensitivity == nil then
+		sensitivity = {
+			Aim = userInfo.commonSensitivity.Aim,
+			scopeX1 = pubg.scopeX1, 
+			scopeX2 = pubg.scopeX2, 
+			scopeX3 = pubg.scopeX3, 
+			scopeX4 = pubg.scopeX4, 
+			scopeX6 = pubg.scopeX6
+		}
+	end
+	
+
 	-- Temporary container
 	local ballisticConfig1 = {}
 	-- Temporary container (v3.0)
@@ -534,7 +547,7 @@ function pubg.execOptions (gunName, options)
 		for j = 1, nextCount do
 			ballisticConfig1[ballisticIndex] =
 				-- options.ballistic[i][2] * pubg.generalSensitivityRatio * options.ratio
-				options.ballistic[i][2] * pubg.generalSensitivityRatio * gunInfo[3]
+				options.ballistic[i][2] * pubg.generalSensitivityRatio * sensitivity.scopeX1
 			ballisticIndex = ballisticIndex + 1
 		end
 	end
@@ -552,12 +565,15 @@ function pubg.execOptions (gunName, options)
 	-- 	ballisticConfig2[i] = math.ceil(ballisticConfig2[i])
 	-- end
 
+
+
 	return {
 		duration = options.interval * #ballisticConfig2, -- Time of duration
 		amount = #ballisticConfig2, -- Number of bullets
 		interval = options.interval, -- Time of each bullet
 		ballistic = ballisticConfig2, -- ballistic data
-		ctrlmodeRatio = gunInfo[4], -- Individual recoil coefficient for each gun when squatting
+		ctrlmodeRatio = gunInfo[3], -- Individual recoil coefficient for each gun when squatting
+		sensitivity = sensitivity
 	}
 
 end
@@ -603,7 +619,6 @@ function pubg.init ()
 	pubg.SetRandomseed()
 	pubg.outputLogRender()
 	-- console.log(pubg)
-
 end
 
 -- SetRandomseed
@@ -615,12 +630,12 @@ end
 function pubg.auto (options)
 
 	-- Accurate aiming press gun
-	pubg.currentTime = GetRunningTime()
+	pubg.currentTime = 200
 	pubg.bulletIndex = math.ceil(((pubg.currentTime - pubg.startTime == 0 and {1} or {pubg.currentTime - pubg.startTime})[1]) / options.interval) + 1
 
 	if pubg.bulletIndex > options.amount then return false end
 	-- Developer Debugging Mode
-	local d = (IsKeyLockOn("scrolllock") and { (pubg.bulletIndex - 1) * pubg.xLengthForDebug } or { 0 })[1]
+	local d = ({ (pubg.bulletIndex - 1) * pubg.xLengthForDebug } or { 0 })[1]
 	local x = math.ceil((pubg.currentTime - pubg.startTime) / (options.interval * (pubg.bulletIndex - 1)) * d) - pubg.xCounter
 	local y = math.ceil((pubg.currentTime - pubg.startTime) / (options.interval * (pubg.bulletIndex - 1)) * options.ballistic[pubg.bulletIndex]) - pubg.counter
 	-- 4-fold pressure gun mode
@@ -659,10 +674,14 @@ end
 function pubg.getRealY (options, y)
 	local realY = y
 
+	local cuurentSensitivity = options.sensitivity[pubg.scope_current]
+
+	local aa = pubg[pubg.scope_current]
+
 	if pubg.isAimingState("ADS") then
 		realY = y * pubg[pubg.scope_current]
 	elseif pubg.isAimingState("Aim") then
-		realY = y * userInfo.sensitivity.Aim * pubg.generalSensitivityRatio
+		realY = y * userInfo.commonSensitivity.Aim * pubg.generalSensitivityRatio
 	end
 
 	if userInfo.aimingSettings == "ctrlmode" and IsModifierPressed("lctrl") then
@@ -991,8 +1010,8 @@ function pubg.outputLogRender ()
 		pubg.renderDom.autoLog,
 		pubg.renderDom.separator,
 	})
-	ClearLog()
-	OutputLogMessage(resStr)
+	-- ClearLog()
+	print(resStr)
 end
 
 --[[ Output switching table ]]
@@ -1011,7 +1030,7 @@ function pubg.outputLogGunSwitchTable ()
 				local tag = gunName == pubg.gun[pubg.bulletType][pubg.gunIndex] and "=> " or "      "
 				gunCount = gunCount + 1
 				allCount = allCount + 1
-				resStr = table.concat({ resStr, tag, allCount, "\t", tag, gunCount, "\t", tag, type, "\t", tag, userInfo.canUse[type][j][3], "\t", tag, userInfo.canUse[type][j][4], "\t", tag, gunName, "\n" })
+				resStr = table.concat({ resStr, tag, allCount, "\t", tag, gunCount, "\t", tag, type, "\t", tag, userInfo.canUse[type][j][3], "\t", tag, userInfo.canUse[type][j][4].scopeX1, "\t", tag, gunName, "\n" })
 			end
 		end
 
@@ -1297,12 +1316,16 @@ end
 -- console
 console = {}
 function console.log (str)
-	OutputLogMessage(table.print(str) .. "\n")
+	print(table.print(str) .. "\n")
 end
 
 --[[ Other ]]
-EnablePrimaryMouseButtonEvents(true) -- Enable left mouse button event reporting
+-- EnablePrimaryMouseButtonEvents(true) -- Enable left mouse button event reporting
 pubg.GD = GetDate -- Setting aliases
 pubg.init() -- Script initialization
+
+pubg.runCmd("scopeX4")
+
+pubg.auto(pubg.gunOptions[pubg.bulletType][pubg.gunIndex])
 
 --[[ Script End ]]
