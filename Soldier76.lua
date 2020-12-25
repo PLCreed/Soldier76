@@ -16,7 +16,7 @@ userInfo = {
 	-- CPU load level, It is recommended to enter a number between 1 and 30, cannot be less than 1.
 	-- The lower the value is, the better the effect is, the higher the value, the higher the number of frames.
 	-- (excessive frame dropping will directly affect the gun pressing effect, please reduce the value while ensuring the frame number)
-	cpuLoad = 4,
+	cpuLoad = 1,
 
 	-- 灵敏度调整 | Sensitivity adjustment
 	commonSensitivity = {
@@ -25,13 +25,13 @@ userInfo = {
 		-- 腰射 | take aim
 		Aim = 0.55,
 		-- 二倍 | twice scope
-		scopeX2 = 0.8,
+		scopeX2 = 2,
 		-- 三倍 | trebling scope
-		scopeX3 = 1.11,
+		scopeX3 = 3,
 		-- 四倍 | quadruple scope
-		scopeX4 = 3.9,
+		scopeX4 = 4,
 		-- 六倍 | sixfold scope
-		scopeX6 = 2.15,
+		scopeX6 = 6,
 	},
 
 	-- 自动腰射，不使用自动腰射留空，使用则设置为键盘上按键
@@ -63,7 +63,7 @@ userInfo = {
 	canUse = {
 		["5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数
-			{ "M416",				1,			0.8,		{ Aim = 0.61, scopeX1 = 1, scopeX2 = 1.14, scopeX3 = 1.145, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
+			{ "M416",				1,			0.8,		{ Aim = 1.47, scopeX1 = 1, scopeX2 = 1.85, scopeX3 = 1.71, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
 			{ "SCAR-L",			0,			0.8, 	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
 			{ "QBZ",				0,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
 			{ "G36C",				0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
@@ -71,7 +71,7 @@ userInfo = {
 		},
 		["7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "Beryl M762",		1,			0.8,  	{ Aim = 0.58, scopeX1 = 1, scopeX2 = 1.13, scopeX3 = 1.067, scopeX4 = 4.15, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "Beryl M762",		1,			0.8,  	{ Aim = 0.58, scopeX1 = 1, scopeX2 = 1.8, scopeX3 = 1.68, scopeX4 = 4.15, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
 			{ "AKM",				1,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.135, scopeX3 = 1.085, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
 			{ "DP-28",			0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 | Reddot
 		},
@@ -323,15 +323,12 @@ pubg["M416"] = function (gunName)
 		interval = 85,
 		ballistic = {
 			{1, 0},
-			{2, 131},
-			{3, 61},
-			{5, 68},
-			{8, 89},
-			{15, 105},
-			{20, 106},
-			{25, 110},
-			{30, 119},
-			{40, 123},
+			{2, 70},
+			{4, 39},
+			{10, 56.5},
+			{15, 71},
+			{30, 72.1},
+			{40, 81},
 		}
 	})
 
@@ -431,22 +428,14 @@ pubg["Beryl M762"] = function (gunName)
 		interval = 86,
 		ballistic = {
 			{1, 0},
-			{2, 150},
-			{3, 100},
-			{4, 85},
-			{6, 115},
-			{7, 125},
-			{10, 136},
-			{11, 146},
-			{12, 140},
-			{14, 155},
-			{15, 157},
-			{18, 162},
-			{20, 175},
-			{25, 185},
-			{30, 178},
-			{35, 177},
-			{40, 177},
+			{2, 95},
+			{3, 55},
+			{5, 66},
+			{10, 78},
+			{15, 100},
+			{20, 108},
+			{30, 108},
+			{40, 110},
 		}
 	})
 
@@ -458,13 +447,12 @@ pubg["AKM"] = function (gunName)
 		interval = 99,
 		ballistic = {
 			{1, 0},
-			{2, 149},
-			{5, 93},
-			{10, 104},
-			{15, 140},
-			{25, 145},
-			{35, 146},
-			{40, 147},
+			{2, 82},
+			{5, 55},
+			{10, 67},
+			{20, 86},
+			{30, 93},
+			{40, 95},
 		}
 	})
 
@@ -496,11 +484,11 @@ pubg["UMP45"] = function (gunName)
 		interval = 94,
 		ballistic = {
 			{1, 0},
-			{5, 70},
-			{10, 97},
-			{15, 111},
-			{30, 123},
-			{35, 126},
+			{5, 41},
+			{10, 65},
+			{15, 70},
+			{30, 78},
+			{35, 74},
 		}
 	})
 
@@ -512,13 +500,12 @@ pubg["Tommy Gun"] = function (gunName)
 		interval = 84,
 		ballistic = {
 			{1, 0},
-			{5, 72},
-			{10, 90},
-			{15, 150},
-			{20, 160},
-			{30, 165},
-			{40, 155},
-			{50, 155},
+			{3, 50},
+			{6, 51},
+			{8, 54},
+			{10, 70},
+			{15, 90},
+			{50, 102},
 		}
 	})
 
@@ -532,18 +519,12 @@ pubg["Vector"] = function (gunName)
 		interval = 55,
 		ballistic = {
 			{1, 0},
-			{2, 60},
-			{3, 50},
-			{5, 51},
-			{6, 80},
-			{7, 80},
-			{10, 80},
-			{12, 85},
-			{15, 99},
-			{20, 126},
-			{25, 126},
-			{28, 125},
-			{33, 126},
+			{6, 41},
+			{10, 49},
+			{13, 58},
+			{15, 66},
+			{20, 73},
+			{33, 78},
 		}
 	})
 
@@ -555,12 +536,12 @@ pubg["Micro UZI"] = function (gunName)
 		interval = 46,
 		ballistic = {
 			{1, 0},
-			{2, 80},
-			{5, 29},
-			{10, 47},
-			{13, 70},
-			{20, 99},
-			{35, 109},
+			{2, 33},
+			{10, 26},
+			{15, 52},
+			{25, 63},
+			{32, 69},
+			{35, 84},
 		}
 	})
 
@@ -821,7 +802,7 @@ function pubg.auto (options)
 	local realY = pubg.getRealY(options, y)
 
 	--MoveMouseRelative(x, realY)
-   	local maxMovePix = 120
+   	local maxMovePix = 100
 	if realY >= maxMovePix then
 		local mod = math.modf( realY / maxMovePix )  -- 取整数
 		local remainder = math.fmod( realY, maxMovePix )    -- 取余数
