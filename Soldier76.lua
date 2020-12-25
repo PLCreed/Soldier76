@@ -67,7 +67,7 @@ userInfo = {
 			{ "SCAR-L",			0,			0.8, 	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
 			{ "QBZ",				0,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
 			{ "G36C",				0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "M16A4",			2,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.155, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
+			{ "M16A4",			2,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.80, scopeX3 = 1.73, scopeX4 = 5.5, scopeX6 = 3.35} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
 		},
 		["7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
@@ -88,14 +88,14 @@ userInfo = {
 
 		["DMR 7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SKS",				1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
-			{ "SLR",				1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
-			--{ "MK47",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
+			{ "SKS",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.23} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
+			{ "SLR",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.92, scopeX3 = 1.82, scopeX4 = 4.6, scopeX6 = 2.00} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
+			{ "MK47",				2,			0.8,		{ Aim = 0.75, scopeX1 = 1, scopeX2 = 1.91, scopeX3 = 1.75, scopeX4 = 6.0, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
 		},
 		["DMR 5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数		
-			{ "Mini14",			1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.00} }, -- 六倍镜 + 扩容
-			{ "QBU",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
+			{ "Mini14",			1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 4.1, scopeX6 = 2.25} }, -- 六倍镜 + 扩容
+			{ "QBU",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
 		},
 		["AR"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
@@ -112,13 +112,13 @@ userInfo = {
 		["G4"] = "Beryl M762|scopeX1",
 		["G5"] = "AKM|scopeX1",
 		["G6"] = "5.56|scopeX1",
-		["G7"] = "M16A4|scopeX3",
+		["G7"] = "M16A4|scopeX4",
 		["G8"] = ".45|scopeX1",
 		["G9"] = "9mm|scopeX1",
 		["G10"] = "last",
 		["G11"] = "next",
 		-- lalt + G
-		["lalt + G3"] = "Mini14|scopeX6",
+		["lalt + G3"] = "",
 		["lalt + G4"] = "scopeX1",
 		["lalt + G5"] = "scopeX2",
 		["lalt + G6"] = "scopeX6",
@@ -128,11 +128,11 @@ userInfo = {
 		["lalt + G10"] = "",
 		["lalt + G11"] = "",
 		-- lctrl + G
-		["lctrl + G3"] = "",
+		["lctrl + G3"] = "Mini14|scopeX6",
 		["lctrl + G4"] = "",
 		["lctrl + G5"] = "",
 		["lctrl + G6"] = "",
-		["lctrl + G7"] = "",
+		["lctrl + G7"] = "MK47|scopeX4",
 		["lctrl + G8"] = "",
 		["lctrl + G9"] = "",
 		["lctrl + G10"] = "",
@@ -390,6 +390,7 @@ pubg["G36C"] = function (gunName)
 
 end
 
+-- 单发
 --pubg["M16A4"] = function (gunName)
 --	return pubg.execOptions(gunName, {
 --		interval = 108,
@@ -407,16 +408,17 @@ end
 --	})
 --end
 
+--三连发
 pubg["M16A4"] = function (gunName)
 	return pubg.execOptions(gunName, {
 		interval = 86,
 		ballistic = {
 			{1, 0},
-			{2, 68},
-			{3, 73},
-			{4, 81},
-			{5, 95},
-			{6, 130},
+			{2, 41},
+			{3, 44},
+			--{4, 54},
+			--{5, 65},
+			--{6, 90},
 		}
 	})
 end
@@ -573,7 +575,7 @@ pubg["SKS"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
 		--interval = 107,
-		interval = 40,
+		interval = 5,
 		ballistic = {
 			{1, 0},
 			{2, 65}
@@ -585,24 +587,27 @@ end
 pubg["SLR"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 10,
+		interval = 5,
+		--interval = 109,
 		ballistic = {
 			{1, 20},
-			{2, 70}
+			{2, 90},
+			--{3, 95}
 		}
 	})
 
 end
 
+--两联发
 pubg["MK47"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 20,
+		interval = 87,
 		ballistic = {
 			{1, 0},
-			{2, 50},
-			--{3, 20},
-			--{4, 95}
+			{2, 45},
+			{3, 46},
+			{4, 62}
 		}
 	})
 
@@ -614,10 +619,10 @@ end
 pubg["Mini14"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 30,
+		interval = 15,
 		ballistic = {
 			{1, 0},
-			{2, 90},
+			{2, 55},
 		}
 	})
 
