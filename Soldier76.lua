@@ -16,7 +16,7 @@ userInfo = {
 	-- CPU load level, It is recommended to enter a number between 1 and 30, cannot be less than 1.
 	-- The lower the value is, the better the effect is, the higher the value, the higher the number of frames.
 	-- (excessive frame dropping will directly affect the gun pressing effect, please reduce the value while ensuring the frame number)
-	cpuLoad = 8,
+	cpuLoad = 4,
 
 	-- 灵敏度调整 | Sensitivity adjustment
 	commonSensitivity = {
@@ -63,43 +63,43 @@ userInfo = {
 	canUse = {
 		["5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数
-			{ "M416",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
-			{ "SCAR-L",			0,			0.8, 			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "QBZ",			0,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "G36C",			0,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "M16A4",			2,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
+			{ "M416",				1,			0.8,		{ Aim = 0.61, scopeX1 = 1, scopeX2 = 1.14, scopeX3 = 1.145, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
+			{ "SCAR-L",			0,			0.8, 	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "QBZ",				0,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "G36C",				0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "M16A4",			2,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.155, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
 		},
 		["7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "Beryl M762",		1,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "AKM",			1,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
-			{ "DP-28",			0,			0.8,  			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 | Reddot
+			{ "Beryl M762",		1,			0.8,  	{ Aim = 0.58, scopeX1 = 1, scopeX2 = 1.13, scopeX3 = 1.067, scopeX4 = 4.15, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "AKM",				1,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.135, scopeX3 = 1.085, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
+			{ "DP-28",			0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 | Reddot
 		},
 		[".45"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "UMP45",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 + 扩容，Bizon (基础镜即可)，Vector (补偿 + 基础镜 + 扩容) | Reddot + Mag，Bizon (Reddot)，Vector (Komp + Reddot + Mag)
-			{ "Tommy Gun",		1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 扩容 | Mag
+			{ "UMP45",			1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.2, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 + 扩容，Bizon (基础镜即可)，Vector (补偿 + 基础镜 + 扩容) | Reddot + Mag，Bizon (Reddot)，Vector (Komp + Reddot + Mag)
+			{ "Tommy Gun",		1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 扩容 | Mag
 		},
 		["9mm"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数			
-			{ "Vector",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 + 扩容 | Reddot + Mag
-			{ "Micro UZI",		1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 扩容 | Mag
+			{ "Vector",			1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.19, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 + 扩容 | Reddot + Mag
+			{ "Micro UZI",		1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 扩容 | Mag
 		},
 
 		["DMR 7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SKS",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
-			{ "SLR",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
+			{ "SKS",				1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
+			{ "SLR",				1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
 			--{ "MK47",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
 		},
 		["DMR 5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数		
-			{ "Mini14",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
+			{ "Mini14",			1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.00} }, -- 六倍镜 + 扩容
 			{ "QBU",			1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
 		},
 		["AR"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SingleShot",		1,			0.8,			{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} },
+			{ "SingleShot",		1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} },
 		},
 	},
 
@@ -108,7 +108,7 @@ userInfo = {
 	-- 指令绑定演示参考: https://github.com/kiccer/Soldier76#g_bind-%E6%8C%87%E4%BB%A4%E7%BB%91%E5%AE%9A%E6%BC%94%E7%A4%BA
 	G_bind = {
 		-- G
-		["G3"] = "SLR|scopeX6",
+		["G3"] = "SKS|scopeX6",
 		["G4"] = "Beryl M762|scopeX1",
 		["G5"] = "AKM|scopeX1",
 		["G6"] = "5.56|scopeX1",
@@ -409,11 +409,14 @@ end
 
 pubg["M16A4"] = function (gunName)
 	return pubg.execOptions(gunName, {
-		interval = 108,
+		interval = 86,
 		ballistic = {
 			{1, 0},
-			{2, 110},
-			{3, 116},
+			{2, 68},
+			{3, 73},
+			{4, 81},
+			{5, 95},
+			{6, 130},
 		}
 	})
 end
@@ -535,10 +538,10 @@ pubg["Vector"] = function (gunName)
 			{10, 80},
 			{12, 85},
 			{15, 99},
-			{20, 128},
-			{25, 128},
-			{28, 127},
-			{33, 128},
+			{20, 126},
+			{25, 126},
+			{28, 125},
+			{33, 126},
 		}
 	})
 
@@ -811,7 +814,22 @@ function pubg.auto (options)
 	local y = math.ceil((pubg.currentTime - pubg.startTime) / (options.interval * (pubg.bulletIndex - 1)) * options.ballistic[pubg.bulletIndex]) - pubg.counter
 	-- 4-fold pressure gun mode
 	local realY = pubg.getRealY(options, y)
-	MoveMouseRelative(x, realY)
+
+	--MoveMouseRelative(x, realY)
+   	local maxMovePix = 120
+	if realY >= maxMovePix then
+		local mod = math.modf( realY / maxMovePix )  -- 取整数
+		local remainder = math.fmod( realY, maxMovePix )    -- 取余数
+		for i = mod, 0, -1 do
+    			MoveMouseRelative(0, maxMovePix)
+		end
+		
+		MoveMouseRelative(x, remainder)
+	else
+		MoveMouseRelative(x, realY)
+	end
+
+
 	-- Whether to issue automatically or not
 	if options.autoContinuousFiring == 1 then
 		PressAndReleaseMouseButton(1)
