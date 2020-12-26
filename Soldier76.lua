@@ -88,9 +88,9 @@ userInfo = {
 
 		["DMR 7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SKS",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.23} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
+			{ "SKS",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 2.23} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
 			{ "SLR",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.92, scopeX3 = 1.82, scopeX4 = 4.6, scopeX6 = 2.00} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
-			{ "MK47",				2,			0.8,		{ Aim = 0.75, scopeX1 = 1, scopeX2 = 1.91, scopeX3 = 1.75, scopeX4 = 6.0, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
+			{ "MK47",				0,			0.8,		{ Aim = 0.75, scopeX1 = 1, scopeX2 = 1.91, scopeX3 = 1.75, scopeX4 = 6.0, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
 		},
 		["DMR 5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数		
@@ -556,10 +556,10 @@ pubg["SKS"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
 		--interval = 107,
-		interval = 5,
+		interval = 20,
 		ballistic = {
 			{1, 0},
-			{2, 65}
+			{2, 60}
 		}
 	})
 
@@ -568,7 +568,7 @@ end
 pubg["SLR"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 5,
+		interval = 20,
 		--interval = 109,
 		ballistic = {
 			{1, 20},
@@ -828,7 +828,7 @@ function pubg.auto (options)
 	pubg.xCounter = pubg.xCounter + x
 	pubg.counter = pubg.counter + y
 
-	pubg.autoSleep(IsKeyLockOn("scrolllock"))
+	--pubg.autoSleep(IsKeyLockOn("scrolllock"))
 
 end
 
