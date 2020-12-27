@@ -57,23 +57,23 @@ userInfo = {
 	},
 
 	-- 支持的枪械，排列顺序即是配置顺序，可以自行调整。
-	-- 模式：0 - 不启用 | 1 - 启用 | 2 - 开启连点
+	-- 模式：0 - 不启用 | 1 - 启用 | 2 - 开启连点 | 3 - 狙击步枪间隔连点
 	-- 系数：枪械自身系数，基于 ADS 进行调整 (ADS为全局系数，此处为自身系数)
 	-- 下蹲系数：下蹲时的系数，基于 ADS 和 自身系数
 	canUse = {
 		["5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数
-			{ "M416",				1,			0.8,		{ Aim = 1.47, scopeX1 = 1, scopeX2 = 1.85, scopeX3 = 1.71, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
-			{ "SCAR-L",			0,			0.8, 	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "QBZ",				0,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "G36C",				0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "M16A4",			2,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.80, scopeX3 = 1.73, scopeX4 = 5.5, scopeX6 = 3.35} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
+			{ "M416",			1,			0.8,		{ Aim = 1.47, scopeX1 = 1, scopeX2 = 1.85, scopeX3 = 1.71, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 枪托 + 扩容 | Komp + Reddot + Triangular grip + Gunstock + Mag
+			{ "SCAR-L",			0,			0.8, 		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "QBZ",			0,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "G36C",			0,			0.8,  		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "M16A4",			2,			0.8,  		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.80, scopeX3 = 1.73, scopeX4 = 5.5, scopeX6 = 3.35} }, -- 补偿 + 基础镜 + 枪托 + 扩容 | Komp + Reddot + Gunstock + Mag
 		},
 		["7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "Beryl M762",		1,			0.8,  	{ Aim = 0.58, scopeX1 = 1, scopeX2 = 1.8, scopeX3 = 1.68, scopeX4 = 4.15, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
-			{ "AKM",				1,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.135, scopeX3 = 1.085, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
-			{ "DP-28",			0,			0.8,  	{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 | Reddot
+			{ "Beryl M762",		1,			0.8,  		{ Aim = 0.58, scopeX1 = 1, scopeX2 = 1.8, scopeX3 = 1.68, scopeX4 = 4.15, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 直角 + 扩容 | Komp + Reddot + Triangular grip + Mag
+			{ "AKM",			1,			0.8,  		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.135, scopeX3 = 1.085, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 补偿 + 基础镜 + 扩容 | Komp + Reddot + Mag
+			{ "DP-28",			0,			0.8,  		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 基础镜 | Reddot
 		},
 		[".45"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
@@ -88,18 +88,18 @@ userInfo = {
 
 		["DMR 7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SKS",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 2.23} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
-			{ "SLR",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.92, scopeX3 = 1.82, scopeX4 = 4.6, scopeX6 = 2.00} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
-			{ "MK47",				0,			0.8,		{ Aim = 0.75, scopeX1 = 1, scopeX2 = 1.91, scopeX3 = 1.75, scopeX4 = 6.0, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
+			{ "SKS",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 2.03} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
+			{ "SLR",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.92, scopeX3 = 1.82, scopeX4 = 4.6, scopeX6 = 2.00} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
+			{ "MK47",			0,			0.8,		{ Aim = 0.75, scopeX1 = 1, scopeX2 = 1.91, scopeX3 = 1.75, scopeX4 = 6.0, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
 		},
 		["DMR 5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数		
-			{ "Mini14",			1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 4.1, scopeX6 = 2.25} }, -- 六倍镜 + 扩容
-			{ "QBU",				1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
+			{ "Mini14",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 4.1, scopeX6 = 2.25} }, -- 六倍镜 + 扩容
+			{ "QBU",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
 		},
 		["AR"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SingleShot",		1,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} },
+			{ "SingleShot",		3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} },
 		},
 	},
 
@@ -108,7 +108,7 @@ userInfo = {
 	-- 指令绑定演示参考: https://github.com/kiccer/Soldier76#g_bind-%E6%8C%87%E4%BB%A4%E7%BB%91%E5%AE%9A%E6%BC%94%E7%A4%BA
 	G_bind = {
 		-- G
-		["G3"] = "SKS|scopeX6",
+		["G3"] = "SKS|scopeX4",
 		["G4"] = "Beryl M762|scopeX1",
 		["G5"] = "AKM|scopeX1",
 		["G6"] = "5.56|scopeX1",
@@ -556,10 +556,13 @@ pubg["SKS"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
 		--interval = 107,
-		interval = 20,
+		interval = 200,
 		ballistic = {
-			{1, 0},
-			{2, 60}
+			{1, 60},
+			--{2, 90},
+			--{3, 60},
+			--{4, 200},
+			--{5, 200}
 		}
 	})
 
@@ -568,12 +571,14 @@ end
 pubg["SLR"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 20,
 		--interval = 109,
+		interval = 200,
 		ballistic = {
-			{1, 20},
-			{2, 90},
-			--{3, 95}
+			{1, 60},
+			--{2, 90},
+			--{3, 60},
+			--{4, 200},
+			--{5, 200}
 		}
 	})
 
@@ -600,7 +605,7 @@ end
 pubg["Mini14"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 15,
+		interval = 200,
 		ballistic = {
 			{1, 0},
 			{2, 55},
@@ -612,7 +617,7 @@ end
 pubg["QBU"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 30,
+		interval = 200,
 		ballistic = {
 			{1, 0},
 			{2, 80},
@@ -630,7 +635,7 @@ end
 pubg["SingleShot"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 10,
+		interval = 200,
 		ballistic = {
 			{1, 0},
 			{2, 40}
@@ -758,10 +763,19 @@ function pubg.init ()
 				pubg.gun[type][gunCount] = gunName -- Adding available firearms to the Arsenal
 				pubg.gunOptions[type][gunCount] = pubg[gunName](gunName) -- Get firearms data and add it to the configuration library
 
-				-- 单独设置连发
+				-- 单独设置步枪连点
 				pubg.gunOptions[type][gunCount].autoContinuousFiring = ({ 0, 0, 1 })[
 					math.max(1, math.min(gunState + 1, 3))
 				]
+
+				-- 单独设置狙击步枪间隔连点
+				pubg.gunOptions[type][gunCount].autoDMRFiring = ({ 0, 0, 0, 1 })[
+					math.max(1, math.min(gunState + 1, 4))
+				]
+
+				-- 枪械状态  
+				pubg.gunOptions[type][gunCount].gunState = gunState
+
 				-- all canUse
 				pubg.allCanUse_count = pubg.allCanUse_count + 1 -- Total plus one
 				pubg.allCanUse[pubg.allCanUse_count] = gunName -- All available firearms
@@ -781,19 +795,48 @@ function pubg.init ()
 
 end
 
--- SetRandomseed
+-- Set Random seed
 function pubg.SetRandomseed ()
-	math.randomseed((pubg.isEffective and {GetRunningTime()} or {0})[1])
+	math.randomseed((pubg.isStart and {GetRunningTime()} or {0})[1])
 end
 
 --[[ Before automatic press gun ]]
 function pubg.auto (options)
 
+	if options.autoDMRFiring == 1 then
+		-- 狙击步枪间隔连点
+		pubg.autoDMR (options)
+	else
+		-- 步枪连点
+		pubg.autoAR (options)
+	end
+
+end
+
+-- 鼠标相对移动，罗技接口MoveMouseRelative(x, y)中， y的取值范围为 -127~128
+function pubg.moveMouseRelative(x, y)
+	local maxMovePix = 100
+	if y >= maxMovePix then
+		local mod = math.modf( y / maxMovePix )  -- 取整数
+		local remainder = math.fmod( y, maxMovePix )    -- 取余数
+		for i = mod, 0, -1 do
+    		MoveMouseRelative(0, maxMovePix)
+		end
+		
+		MoveMouseRelative(x, remainder)
+	else
+		MoveMouseRelative(x, y)
+	end
+end
+
+-- 步枪连点
+function pubg.autoAR (options)
 	-- Accurate aiming press gun
 	pubg.currentTime = GetRunningTime()
 	pubg.bulletIndex = math.ceil(((pubg.currentTime - pubg.startTime == 0 and {1} or {pubg.currentTime - pubg.startTime})[1]) / options.interval) + 1
 
 	if pubg.bulletIndex > options.amount then return false end
+
 	-- Developer Debugging Mode
 	local d = (IsKeyLockOn("scrolllock") and { (pubg.bulletIndex - 1) * pubg.xLengthForDebug } or { 0 })[1]
 	local x = math.ceil((pubg.currentTime - pubg.startTime) / (options.interval * (pubg.bulletIndex - 1)) * d) - pubg.xCounter
@@ -801,20 +844,7 @@ function pubg.auto (options)
 	-- 4-fold pressure gun mode
 	local realY = pubg.getRealY(options, y)
 
-	--MoveMouseRelative(x, realY)
-   	local maxMovePix = 100
-	if realY >= maxMovePix then
-		local mod = math.modf( realY / maxMovePix )  -- 取整数
-		local remainder = math.fmod( realY, maxMovePix )    -- 取余数
-		for i = mod, 0, -1 do
-    			MoveMouseRelative(0, maxMovePix)
-		end
-		
-		MoveMouseRelative(x, remainder)
-	else
-		MoveMouseRelative(x, realY)
-	end
-
+	pubg.moveMouseRelative(x, realY)
 
 	-- Whether to issue automatically or not
 	if options.autoContinuousFiring == 1 then
@@ -829,7 +859,35 @@ function pubg.auto (options)
 	pubg.counter = pubg.counter + y
 
 	--pubg.autoSleep(IsKeyLockOn("scrolllock"))
+end
 
+-- 狙击步枪间隔连点
+function pubg.autoDMR (options)
+	pubg.currentTime = GetRunningTime()
+
+	if pubg.bulletIndex > options.amount then return false end
+	-- Developer Debugging Mode
+	local d = (IsKeyLockOn("scrolllock") and { (pubg.bulletIndex) * pubg.xLengthForDebug * 1.5 } or { 0 })[1]
+	local x = d - pubg.xCounter
+	local y = options.ballistic[pubg.bulletIndex] - pubg.counter
+
+	-- 4-fold pressure gun mode
+	local realY = pubg.getRealY(options, y)
+
+	pubg.moveMouseRelative(x, realY)
+	
+	pubg.autoLog(options, y)
+	pubg.outputLogRender()
+
+	pubg.xCounter = pubg.xCounter + x
+	pubg.counter = pubg.counter + y
+
+	if options.autoDMRFiring == 1 and (pubg.isAimingState("ADS") or pubg.isAimingState("Aim")) then
+		PressAndReleaseMouseButton(1)
+		Sleep(options.interval)
+
+		pubg.bulletIndex = pubg.bulletIndex + 1
+	end
 end
 
 --[[ Sleep of pubg.auto ]]
@@ -1210,7 +1268,7 @@ end
 --[[ Output switching table ]]
 function pubg.outputLogGunSwitchTable ()
 	local allCount = 0
-	local resStr = "      canUse_i\t      series_i\t      Series\t      ratio\t      ctrl ratio\t      Gun Name\n\n"
+	local resStr = "     canUse_i\t      series_i\t      Series\t      ratio\t      ctrl ratio\t      Gun Name\n\n"
 
 	for i = 1, #forList do
 		local type = forList[i]
@@ -1237,13 +1295,35 @@ function pubg.outputLogGunInfo ()
 	local i = pubg.gunIndex
 	local gunName = pubg.gun[k][i]
 
+	local gunState =  pubg.gunOptions[k][i].gunState
+
+	-- return table.concat({
+	-- 	"Currently scope: [ " .. pubg.scope_current .. " ]\n",
+	-- 	"Currently series: [ ", k, " ]\n",
+	-- 	"Currently index in series: [ ", i, " / ", #pubg.gun[k], " ]\n",
+	-- 	"Currently index in canUse: [ ", pubg.allCanUse_index, " / ", pubg.allCanUse_count, " ]\n",
+	-- 	"Gun State:   [  ", tostring(gunState), "  ]  ,  ",
+	-- 	"Recoil table of:   [  ", gunName, "  ]\n",
+	-- 	pubg.outputLogRecoilTable(),
+	-- })
+
 	return table.concat({
-		"Currently scope: [ " .. pubg.scope_current .. " ]\n",
-		"Currently series: [ ", k, " ]\n",
-		"Currently index in series: [ ", i, " / ", #pubg.gun[k], " ]\n",
-		"Currently index in canUse: [ ", pubg.allCanUse_index, " / ", pubg.allCanUse_count, " ]\n",
-		"Recoil table of [ ", gunName, " ]:\n",
+		" ==================================== Currently ==================================== \n",
+		"Gun Name\t    ",
+		"Scope\t    ",
+		"Series\t",
+		"Index in series              ", 
+		"Index in canUse              ", 
+		"Gun State\n",
+		"",gunName,"\t    ",
+		"".. pubg.scope_current .. "\t    ",
+		"", k, "\t",
+		"", i, " / ", #pubg.gun[k], "\t               ",
+		"", pubg.allCanUse_index, " / ", pubg.allCanUse_count, "\t\t      ",
+		"", gunState, "\t\n\n",
+		"Recoil table of:   [  ", gunName, "  ]\n",
 		pubg.outputLogRecoilTable(),
+		"\n"
 	})
 end
 
@@ -1269,11 +1349,11 @@ end
 function pubg.autoLog (options, y)
 	pubg.renderDom.autoLog = table.concat({
 		"----------------------------------- Automatically counteracting gun recoil -----------------------------------\n",
-		"------------------------------------------------------------------------------------------------------------------------------\n",
+		--"------------------------------------------------------------------------------------------------------------------------------\n",
 		"bullet index: ", pubg.bulletIndex, "    target counter: ", options.ballistic[pubg.bulletIndex], "    current counter: ", pubg.counter, "\n",
 		"D-value(target - current): ", options.ballistic[pubg.bulletIndex], " - ", pubg.counter, " = ", options.ballistic[pubg.bulletIndex] - pubg.counter, "\n",
 		"move: math.ceil((", pubg.currentTime, " - ", pubg.startTime, ") / (", options.interval, " * (", pubg.bulletIndex, " - 1)) * ", options.ballistic[pubg.bulletIndex], ") - ", pubg.counter, " = ", y, "\n",
-		"------------------------------------------------------------------------------------------------------------------------------\n",
+		--"------------------------------------------------------------------------------------------------------------------------------\n",
 	})
 end
 
@@ -1297,6 +1377,7 @@ function pubg.OnEvent_NoRecoil (event, arg, family)
 		if pubg.isAimingState("ADS") or pubg.isAimingState("Aim") then
 			pubg.startTime = GetRunningTime()
 			pubg.G1 = true
+			pubg.bulletIndex = 1;
 			SetMKeyState(1, "kb")
 		end
 	end
@@ -1306,6 +1387,7 @@ function pubg.OnEvent_NoRecoil (event, arg, family)
 		pubg.G1 = false
 		pubg.counter = 0 -- Initialization counter
 		pubg.xCounter = 0 -- Initialization xCounter
+		pubg.bulletIndex = 0;
 		pubg.SetRandomseed() -- Reset random number seeds
 	end
 
