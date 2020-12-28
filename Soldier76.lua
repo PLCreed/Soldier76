@@ -88,14 +88,14 @@ userInfo = {
 
 		["DMR 7.62"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
-			{ "SKS",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 2.03} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
-			{ "SLR",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.92, scopeX3 = 1.82, scopeX4 = 4.6, scopeX6 = 2.00} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
+			{ "SKS",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 2.0, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 1.95} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 托腮板
+			{ "SLR",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 1.92, scopeX3 = 1.82, scopeX4 = 4.0, scopeX6 = 2.00} }, -- 六倍镜 + 消音 + 扩容 + 托腮板
 			{ "MK47",			0,			0.8,		{ Aim = 0.75, scopeX1 = 1, scopeX2 = 1.91, scopeX3 = 1.75, scopeX4 = 6.0, scopeX6 = 2.15} }, -- 六倍镜 + 消音 + 无握把 + 扩容 + 枪托
 		},
 		["DMR 5.56"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数		
-			{ "Mini14",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 4.1, scopeX6 = 2.25} }, -- 六倍镜 + 扩容
-			{ "QBU",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 3.9, scopeX6 = 2.15} }, -- 六倍镜 + 扩容
+			{ "Mini14",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 1.30} }, -- 六倍镜 + 扩容
+			{ "QBU",			3,			0.8,		{ Aim = 0.55, scopeX1 = 1, scopeX2 = 0.8, scopeX3 = 1.11, scopeX4 = 4.0, scopeX6 = 1.60} }, -- 六倍镜 + 扩容
 		},
 		["AR"] = {
 			-- 枪械				模式		下蹲系数		灵敏度系数	
@@ -108,7 +108,7 @@ userInfo = {
 	-- 指令绑定演示参考: https://github.com/kiccer/Soldier76#g_bind-%E6%8C%87%E4%BB%A4%E7%BB%91%E5%AE%9A%E6%BC%94%E7%A4%BA
 	G_bind = {
 		-- G
-		["G3"] = "SKS|scopeX4",
+		["G3"] = "SKS|scopeX6",
 		["G4"] = "Beryl M762|scopeX1",
 		["G5"] = "AKM|scopeX1",
 		["G6"] = "5.56|scopeX1",
@@ -555,10 +555,9 @@ end
 pubg["SKS"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		--interval = 107,
-		interval = 200,
+		interval = 20,
 		ballistic = {
-			{1, 60},
+			{1, 35},
 			--{2, 90},
 			--{3, 60},
 			--{4, 200},
@@ -571,10 +570,9 @@ end
 pubg["SLR"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		--interval = 109,
-		interval = 200,
+		interval = 20,
 		ballistic = {
-			{1, 60},
+			{1, 28},
 			--{2, 90},
 			--{3, 60},
 			--{4, 200},
@@ -605,10 +603,10 @@ end
 pubg["Mini14"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 200,
+		interval = 20,
 		ballistic = {
 			{1, 0},
-			{2, 55},
+			{2, 70},
 		}
 	})
 
@@ -617,10 +615,10 @@ end
 pubg["QBU"] = function (gunName)
 
 	return pubg.execOptions(gunName, {
-		interval = 200,
+		interval = 20,
 		ballistic = {
 			{1, 0},
-			{2, 80},
+			{2, 60},
 		}
 	})
 
